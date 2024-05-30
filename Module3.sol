@@ -9,8 +9,8 @@ contract Etherium is ERC20, Ownable {
     mapping(address => uint256) private _ownerMintedAmounts;
 
     constructor(address owner) ERC20("Etherium", "ETH") Ownable(owner) {
-        // Initialize the maximum owner mint to 0
-        _maxOwnerMint = 0;
+        
+        _maxOwnerMint = 300;
     }
 
     modifier onlyUnderMaxOwnerMint(uint256 amount) {
